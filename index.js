@@ -55,22 +55,6 @@ app.post("/create-meeting", async (req, res) => {
     res.status(500).json({ error: "Erro interno do servidor" });
   }
 });
-
-// Rota para criar uma nova reunião
-// app.post("/create-meeting", async (req, res) => {
-//   try {
-//     const response = await axiosInstance.post("/meetings", {
-//       // Você pode configurar opções de reunião aqui, consulte a documentação do Whereby para mais detalhes
-//       // body: JSON.stringify(data),
-//     });
-//     console.log({ response });
-//     res.json(response.data);
-//   } catch (error) {
-//     res.status(500).json({ error: "Erro ao criar reunião" });
-//   }
-// });
-
-// Rota para obter informações sobre uma reunião específica
 app.get("/get-meeting/:meetingId", async (req, res) => {
   try {
     const { meetingId } = req.params;
